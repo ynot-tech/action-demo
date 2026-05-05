@@ -46,7 +46,7 @@ jobs:
             --from 'aakhildevk@gmail.com' \
             --destination 'ToAddresses="ab.joshy99@gmail.com"' \
             --message 'Subject={Data="✅ Build Success - ${{ github.repository }}"},Body={Text={Data="Build for ${{ github.repository }} on branch `${{ github.ref_name}}` was successful!\n\nCommit: `${{ github.sha}}`\nWorkflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}}' \
-            --region us-east-1 # Ensure this matches your aws-region above
+            --region ap-south-1 # Ensure this matches your aws-region above
 
       - name: Send Email Notification (on failure)
         # This step runs ONLY if any previous step in this job has failed.
@@ -56,4 +56,4 @@ jobs:
             --from 'aakhildevk@gmail.com' \
             --destination 'ToAddresses="ab.joshy99@gmail.com"' \
             --message 'Subject={Data="❌ Build FAILED - ${{ github.repository }}"},Body={Text={Data="*ALERT:* Build for ${{ github.repository }} on branch `${{ github.ref_name}}` *FAILED!*\n\nCommit: `${{ github.sha}}`\n*Please review logs:* ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}}' \
-            --region us-east-1
+            --region ap-south-1
