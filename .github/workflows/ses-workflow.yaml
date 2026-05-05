@@ -24,7 +24,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           # IMPORTANT: Replace 'YOUR_IAM_ROLE_ARN_GOES_HERE' with the actual ARN of your IAM role from AWS!
-          role-to-assume: YOUR_IAM_ROLE_ARN_GOES_HERE
+          role-to-assume: arn:aws:iam::869096797764:oidc-provider/token.actions.githubusercontent.com
           # This must be the AWS region where your SES sender identity is verified.
           aws-region: us-east-1 # Example: us-east-1
 
